@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // async函数的返回值是一个promise对象
+    // async函数返回的promise的结果由函数执行的结果决定
+    async function fn1() {
+        return 1
+        // throw 2
+        // return Promise.reject(3)
+        // return Promise.resolve(3)
+        // return new Promise((resolve, reject) => {
+        //     setTimeout((
+        //         resolve(4)
+        //     ),3000)
+        // })
+    }
+    const result=fn1()
+    console.log(result)
+    result.then(
+        value => {
+            console.log('onRsesolved()',value)
+        },
+        reason => {
+            console.log('onRejected()',reason)
+        }
+    )
+
+
+    function fn2() {
+        // return Promise.resolve(32)
+        return Promise.reject(32)
+    }
+
+    function fn4(){
+        return 6
+    }
+
+    async function fn3() {
+        try{
+            // const value = await fn2()  // await右侧表达式为promise，得到的结果就是promise成功的value
+            const value = await fn1()
+            console.log('value',value)
+        } catch (e) {
+            console.log('得到失败的结果', e)
+        }
+        // const value = await fn4() // await右侧表达式不是promise，得到的结果就是他本身
+    }
+    fn3()
+</script>
+</body>
+</html>

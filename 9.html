@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 先指定函调函数 后改变状态
+    new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(1) // 后改变状态 异步执行回调函数
+        },1000)
+    }).then( // 先指定回调函数
+        value => {console.log('value',value)},
+        reason => {console.log('reason',reason)}
+    )
+
+    // 先改变状态 后指定回调
+    new Promise((resolve,reject)=>{
+        resolve(1) // 先改变状态
+    }).then( // 后指定回调函数 异步执行回调函数
+        value => {console.log('value',value)},
+        reason => {console.log('reason',reason)}
+    )
+    console.log('-------')
+
+    const p = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(1)
+        },1000)
+    })
+    setTimeout(()=>{
+        p.then(
+            value => {console.log('value',value)},
+            reason => {console.log('reason',reason)}
+        )
+    },1000)
+</script>
+</body>
+</html>

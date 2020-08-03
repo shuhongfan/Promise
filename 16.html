@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    setTimeout(()=>{ // 立即放入宏队列
+        console.log('timeout callback1')
+        Promise.resolve(3).then( // 立即放入微队列
+            value => {
+                console.log('onResolved3',value)
+            }
+        )
+    },0)
+    setTimeout(()=>{ // 立即放入宏队列
+        console.log('timeout callback2')
+    },0)
+
+    Promise.resolve(1).then( // 立即放入微队列
+        value => {
+            console.log('onResolved1',value)
+        }
+    )
+    Promise.resolve(2).then( // 立即放入微队列
+        value => {
+            console.log('onResolved2',value)
+        }
+    )
+</script>
+</body>
+</html>

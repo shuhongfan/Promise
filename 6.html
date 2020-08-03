@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 成功的回调函数
+    function successCallback(result) {
+        console.log('声音文件创建成功'+result)
+    }
+    // 失败的回调函数
+    function failureCallback(error) {
+        console.log('声音文件创建失败'+error)
+    }
+    createAudioFileAsync(audioSettings)
+
+    // 支持链式调用 可以解决回调地狱问题
+    // 什么是回调地狱 回调函数嵌套调用 外部回调函数异步执行的结果是嵌套的回调函数执行的条件
+    // 回调地狱的缺点 不便于阅读 不便于异常处理
+    // 解决方案 promise链式调用
+    // 终极解决方案 async / await
+
+    // 回调地狱
+    doSomething(function (result) {
+        doSomething(result,function (newRsult) {
+            doSomething(newRsult,function (finalResult) {
+                console.log('got the final result'+finalResult)
+            },failureCallback)
+        },failureCallback)
+    },failureCallback)
+
+    // promise的链式调用解决回调地狱
+    doSomething().then(function (result) {
+        return doSomething(result)
+    })
+    .then(function (newResult) {
+        return doSomething(result)
+    })
+    .catch(failureCallback)
+
+    // async/await 回调地狱最终解决方案
+    async function request() {
+        try {
+            const result = await doSomething()
+            const newResult = await doSomething(result)
+            const finalResult = await doSomething(newResult)
+            console.log('got the final result'+finalResult)
+        } catch (e) {
+            failureCallback(e)
+        }
+    }
+</script>
+</body>
+</html>

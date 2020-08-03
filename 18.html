@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    setTimeout(()=>{
+        console.log(1)
+    },0)
+
+    new Promise((resolve)=>{
+        console.log(2)
+        resolve()
+    }).then(()=>{
+        console.log(3)
+    }).then(()=>{
+        console.log(4)
+    })
+    console.log(5)
+
+    // 同步：[2,5]
+    // 宏：[1]
+    // 微：[3,4]
+</script>
+</body>
+</html>

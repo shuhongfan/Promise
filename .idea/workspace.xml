@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c727557b-a3a1-4ba7-a72a-bcc1cf214119" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1czHJnA3tIiHdV6mkTxWFqhuG2k" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../axios" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\练习DEMO\Promise\lib" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c727557b-a3a1-4ba7-a72a-bcc1cf214119" name="默认的" comment="" />
+      <created>1591524431785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591524431785</updated>
+      <workItem from="1591524433142" duration="4206000" />
+      <workItem from="1591600620877" duration="8016000" />
+      <workItem from="1591666140732" duration="27547000" />
+      <workItem from="1591843070098" duration="1257000" />
+      <workItem from="1591858836994" duration="10719000" />
+      <workItem from="1591932210589" duration="15493000" />
+      <workItem from="1592014349192" duration="3479000" />
+      <workItem from="1592038618716" duration="1246000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="918" y="177" key="FileChooserDialogImpl" timestamp="1592047878218">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="918" y="177" key="FileChooserDialogImpl/0.0.1549.831@0.0.1549.831" timestamp="1592047878218" />
+    <state x="801" y="152" width="672" height="678" key="search.everywhere.popup" timestamp="1591955159735">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="801" y="152" width="672" height="678" key="search.everywhere.popup/0.0.1549.831@0.0.1549.831" timestamp="1591955159735" />
+  </component>
+</project>
